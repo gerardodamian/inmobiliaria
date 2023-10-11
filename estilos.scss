@@ -1,0 +1,212 @@
+$color1: green;
+$color2: black;
+$color3: rgb(174, 219, 86);
+$h1fz: 50px;
+
+body{
+    background-color: rgba(127, 205, 125, 0.7);
+}
+
+.nav-link {
+    color: $color1 !important;
+}
+h1 {
+    color: $color1;
+    font-size: $h1fz;
+}
+p {
+    color: $color2;
+}
+.volver-inicio a {
+    background-color: rgb(2, 67, 23);
+    color: rgb(127, 166, 201);
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    left: 180px;
+    bottom: 40px;
+}
+/*empieza alquiler*/
+
+.contenedor {
+    background-color: $color1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+        "img1 img2 img3 img3"
+        "img1 img4 img5 img6"
+        "img7 img4 img8 img8";
+    grid-gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.item1 {
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    transition: all 0.9s;
+    border: 2px solid black;
+}
+.item1:hover {
+    transform: scale(1.09);
+}
+.item1 {
+    background-image: url(img/a1.jpg);
+    grid-area: img1;
+}
+.item2 {
+    background-image: url(img/a2.jpg);
+    grid-area: img2;
+}
+.item3 {
+    background-image: url(img/a3.jpeg);
+    grid-area: img3;
+}
+.item4 {
+    background-image: url(img/a4.jpg);
+    grid-area: img4;
+}
+.item5 {
+    background-image: url(img/a5.webp);
+    grid-area: img5;
+}
+.item6 {
+    background-image: url(img/a6.jpeg);
+    grid-area: img6;
+}
+.item7 {
+    background-image: url(img/a7.jpeg);
+    grid-area: img7;
+}
+.item8 {
+    background-image: url(img/a8.jpeg);
+    grid-area: img8;
+}
+footer {
+    height: 200px;
+    background-color: $color3;
+}
+.card {
+    background-color: $color3;
+}
+
+/*empieza lotes*/
+
+
+
+.card {
+    border: 8px solid $color1;
+}
+.section-lote {
+    background-color: $color3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 600px);
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 20px;
+}
+/*empieza cabañass*/
+
+.puma-icon,
+.egret-icon,
+.sea-slug-icon {
+	height: 350px;
+	width: 100%;
+	border: 2px solid #333;
+}
+
+
+@each $animal in puma, sea-slug , egret {
+	.#{$animal}-icon {
+		//background-image: url("img/egret.jpg");
+		background-image: url("img/#{$animal}.jpg");
+		background-size: cover;
+		background-position: center;
+		filter: grayscale(100%);
+	}
+}
+
+@each $animal in puma ,sea-slug , egret {
+	.#{$animal}-icon:hover {
+		//background-image: url("img/puma.jpg");
+		filter: grayscale(0%);
+	}
+}
+/*empieza contacto*/
+
+.turno {
+    width: 500px;
+    background-color: greenyellow;
+    padding: 30px;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    border-radius: 4px;
+    color: $color1;
+    box-shadow: 7px 13px 37px #000;
+}
+.turno h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.controls {
+    width: 100%;
+    background: rgb(170, 227, 170);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid green;
+    font-size: 18px;
+    color: rgb(5, 69, 6);
+}
+
+.turno p {
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+}
+.turno a {
+    color: rgb(2, 52, 2);
+    text-decoration: none;
+}
+.turno a:hover {
+    color: $color1;
+    text-decoration: underline;
+}
+.turno .button {
+    width: 100%;
+    background: rgb(24, 76, 3);
+    border: none;
+    padding: 12px;
+    color: $color1;
+    margin: 16px 0;
+    font-size: 25px;
+    border-radius: 5px;
+}
+.turno .button:hover {
+    background: rgb(31, 28, 28);
+}
+.whatsapp {
+    height: 30px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 4px rgb(60, 64, 60);
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+.whatsapp a {
+    color: $color1;
+   font-size: 40px;
+}
